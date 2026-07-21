@@ -19,7 +19,22 @@
 
 const http = require("http");
 const os = require("os");
-const { WebSocketServer } = require("ws");
+
+// node_modules はリポジトリに含めないため、別の PC に持ち込んだ直後は必ずここで失敗する。
+// Node の既定エラーは原因が読み取りにくいので、何をすれば直るかを明示する。
+let WebSocketServer;
+try {
+    ({ WebSocketServer } = require("ws"));
+} catch {
+    console.error("");
+    console.error("【起動できません】必要な部品 'ws' がまだインストールされていません。");
+    console.error("");
+    console.error("次の2行を実行してください（この PC では1回だけで済みます）:");
+    console.error(`    cd ${__dirname}`);
+    console.error("    npm install");
+    console.error("");
+    process.exit(1);
+}
 
 const PORT = Number(process.env.PORT) || 8080;
 
