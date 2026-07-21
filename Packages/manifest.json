@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "com.boxqkrtm.ide.cursor": "https://github.com/boxqkrtm/com.unity.ide.cursor.git",
     "com.meta.xr.mrutilitykit": "83.0.4",
     "com.meta.xr.sdk.core": "83.0.4",
+    "com.meta.xr.sdk.voice": "85.0.1",
     "com.unity.ai.inference": "2.3.0",
     "com.unity.ide.rider": "3.0.38",
     "com.unity.ide.visualstudio": "2.0.23",
@@ -9,6 +11,7 @@
     "com.unity.mobile.android-logcat": "1.4.6",
     "com.unity.render-pipelines.universal": "17.2.0",
     "com.unity.ugui": "2.0.0",
+    "com.unity.webrtc": "3.0.0-pre.8",
     "com.unity.xr.management": "4.5.1",
     "com.unity.xr.meta-openxr": "2.2.1",
     "com.unity.xr.openxr": "1.15.1",
